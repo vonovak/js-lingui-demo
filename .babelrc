@@ -1,0 +1,8 @@
+{
+  "presets": ["babel-preset-expo", "@lingui/babel-preset-react"],
+  "env": {
+    "development": {
+      "plugins": ["transform-react-jsx-source"]
+    }
+  }
+}

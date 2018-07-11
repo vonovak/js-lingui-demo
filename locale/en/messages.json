@@ -1,0 +1,134 @@
+{
+  "Do you want to set all your messages as read?": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        59
+      ]
+    ]
+  },
+  "toggle language to {0}": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        41
+      ]
+    ]
+  },
+  "Message Inbox": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        77
+      ]
+    ]
+  },
+  "See all unread messages or": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        81
+      ]
+    ]
+  },
+  "mark messages as read": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        83
+      ]
+    ]
+  },
+  "increment number (cs is better for that)": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        84
+      ]
+    ]
+  },
+  "{messagesCount, plural, =0 {You have no unread messages} one {There's # message in your inbox} few {There're # messages in your inbox} other {There're # messages in your inbox}}": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        87
+      ]
+    ]
+  },
+  "Last login on {lastLogin}.": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        98
+      ]
+    ]
+  },
+  "change plural (cs is better for that)": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        84
+      ]
+    ],
+    "obsolete": true
+  },
+  "toggle language": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        39
+      ]
+    ],
+    "obsolete": true
+  },
+  "add message": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        81
+      ]
+    ],
+    "obsolete": true
+  },
+  "{messagesCount, plural, =0 {You have no unread messages} one {There's # message in your inbox} many {There're # messages in your inbox} other {There're # messages in your inbox}}": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        84
+      ]
+    ],
+    "obsolete": true
+  },
+  "{messagesCount, plural, =0 {You have no unread messages} one {There's # message in your inbox} other {There're # messages in your inbox}}": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        75
+      ]
+    ],
+    "obsolete": true
+  },
+  "{messagesCount, plural, one {There's # message in your inbox} other {There're # messages in your inbox}}": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        75
+      ]
+    ],
+    "obsolete": true
+  }
+}

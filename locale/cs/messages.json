@@ -1,0 +1,74 @@
+{
+  "Do you want to set all your messages as read?": {
+    "translation": "Chcete označit zprávy jako doručené?",
+    "origin": [
+      [
+        "App.js",
+        59
+      ]
+    ]
+  },
+  "toggle language to {0}": {
+    "translation": "přepnout jazyk na {0}",
+    "origin": [
+      [
+        "App.js",
+        41
+      ]
+    ]
+  },
+  "Message Inbox": {
+    "translation": "Doručené",
+    "origin": [
+      [
+        "App.js",
+        77
+      ]
+    ]
+  },
+  "See all unread messages or": {
+    "translation": "Prohlédněte si nepřečtené zprávy",
+    "origin": [
+      [
+        "App.js",
+        81
+      ]
+    ]
+  },
+  "mark messages as read": {
+    "translation": "označit zprávy jako doručené",
+    "origin": [
+      [
+        "App.js",
+        83
+      ]
+    ]
+  },
+  "increment number (cs is better for that)": {
+    "translation": "změňte množné číslo",
+    "origin": [
+      [
+        "App.js",
+        84
+      ]
+    ]
+  },
+  "{messagesCount, plural, =0 {You have no unread messages} one {There's # message in your inbox} few {There're # messages in your inbox} other {There're # messages in your inbox}}": {
+    "translation": "{messagesCount, plural, =0 {Nemáte žádné nepřečtené zprávy} one {Máte jednu nepřečtenou zprávu} few {Máte # nepřečtené zprávy} other {Máte # nepřečtených zpráv}}",
+    "origin": [
+      [
+        "App.js",
+        87
+      ]
+    ]
+  },
+  "Last login on {lastLogin}.": {
+    "translation": "Poslední přihlášení {lastLogin}",
+    "origin": [
+      [
+        "App.js",
+        98
+      ]
+    ]
+  }
+}
