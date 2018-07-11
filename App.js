@@ -26,7 +26,11 @@ export default class App extends React.Component {
   };
   render() {
     return (
-      <I18nProvider i18n={this.state.i18n} language={this.state.activeLanguage}>
+      <I18nProvider
+        i18n={this.state.i18n}
+        language={this.state.activeLanguage}
+        defaultRender={({ translation }) => <Text>{translation}</Text>}
+      >
         <SafeAreaView style={styles.container}>
           <Button
             onPress={this.toggleLanguage}
@@ -77,21 +81,17 @@ const Inbox = ({ messages, markAsRead, user, addMessage }) => {
           <Trans>Message Inbox</Trans>
         </Text>
 
-        <Text>
-          <Trans>See all unread messages or</Trans>
-        </Text>
+        <Trans>See all unread messages or</Trans>
         <Button onPress={markAsRead} title={i18n.t`mark messages as read`} />
         <Button onPress={addMessage} title={i18n.t`increment number (cs is better for that)`} />
 
-        <Text>
-          <Plural
-            value={messagesCount}
-            _0="You have no unread messages"
-            one="There's # message in your inbox"
-            few="There're # messages in your inbox"
-            other="There're # messages in your inbox"
-          />
-        </Text>
+        <Plural
+          value={messagesCount}
+          _0="You have no unread messages"
+          one="There's # message in your inbox"
+          few="There're # messages in your inbox"
+          other="There're # messages in your inbox"
+        />
       </View>
 
       <Text>
