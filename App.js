@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Alert, SafeAreaView, Button } from 'react-native';
-import { I18nProvider, Trans, Plural } from '@lingui/react';
+import { I18nProvider, Trans, Plural, withI18n } from '@lingui/react';
 import { setupI18n } from '@lingui/core';
 import enMessages from './locale/en/messages.js';
 import csMessages from './locale/cs/messages.js';
@@ -16,32 +16,31 @@ const createI18 = language => {
 };
 
 // you can keep this in a separate module and expose as a singleton
-let i18n = createI18('en');
+let initialI18n = createI18('en');
 
 export default class App extends React.Component {
   state = {
-    i18n,
+    i18n: initialI18n,
     activeLanguage: 'en',
     messages: [],
   };
   render() {
+    const { i18n, activeLanguage, messages } = this.state;
     return (
       <I18nProvider
-        i18n={this.state.i18n}
-        language={this.state.activeLanguage}
+        i18n={i18n}
+        language={activeLanguage}
         defaultRender={({ translation }) => <Text>{translation}</Text>}
       >
         <SafeAreaView style={styles.container}>
           <Button
             onPress={this.toggleLanguage}
-            title={i18n.t`toggle language to ${this.state.activeLanguage === 'en' ? 'cs' : 'en'}`}
+            title={i18n.t`toggle language to ${activeLanguage === 'en' ? 'cs' : 'en'}`}
           />
           <Inbox
-            user={{
-              lastLogin: '12/1/2018',
-            }}
+            username="John"
             markAsRead={this.showAlert}
-            messages={this.state.messages}
+            messages={messages}
             addMessage={this.addMessage}
           />
         </SafeAreaView>
@@ -70,9 +69,8 @@ export default class App extends React.Component {
   };
 }
 
-const Inbox = ({ messages, markAsRead, user, addMessage }) => {
+const Inbox = withI18n()(({ messages, markAsRead, username, addMessage, i18n }) => {
   const messagesCount = messages.length;
-  const { lastLogin } = user;
 
   return (
     <View style={styles.container}>
@@ -95,11 +93,11 @@ const Inbox = ({ messages, markAsRead, user, addMessage }) => {
       </View>
 
       <Text>
-        <Trans>Last login on {lastLogin}.</Trans>
+        <Trans>{username}.</Trans>
       </Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
