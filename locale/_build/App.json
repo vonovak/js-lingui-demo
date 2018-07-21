@@ -3,7 +3,7 @@
     "origin": [
       [
         "App.js",
-        59
+        49
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "App.js",
-        41
+        24
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "App.js",
-        81
+        80
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "App.js",
-        83
+        81
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "App.js",
-        84
+        82
       ]
     ]
   },
@@ -51,15 +51,15 @@
     "origin": [
       [
         "App.js",
-        87
+        84
       ]
     ]
   },
-  "Last login on {lastLogin}.": {
+  "{username}.": {
     "origin": [
       [
         "App.js",
-        98
+        94
       ]
     ]
   }

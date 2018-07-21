@@ -1,10 +1,19 @@
 {
+  "{username}.": {
+    "translation": "",
+    "origin": [
+      [
+        "App.js",
+        94
+      ]
+    ]
+  },
   "Do you want to set all your messages as read?": {
     "translation": "",
     "origin": [
       [
         "App.js",
-        59
+        49
       ]
     ]
   },
@@ -13,7 +22,7 @@
     "origin": [
       [
         "App.js",
-        41
+        24
       ]
     ]
   },
@@ -31,7 +40,7 @@
     "origin": [
       [
         "App.js",
-        81
+        80
       ]
     ]
   },
@@ -40,7 +49,7 @@
     "origin": [
       [
         "App.js",
-        83
+        81
       ]
     ]
   },
@@ -49,7 +58,7 @@
     "origin": [
       [
         "App.js",
-        84
+        82
       ]
     ]
   },
@@ -58,77 +67,8 @@
     "origin": [
       [
         "App.js",
-        87
-      ]
-    ]
-  },
-  "Last login on {lastLogin}.": {
-    "translation": "",
-    "origin": [
-      [
-        "App.js",
-        98
-      ]
-    ]
-  },
-  "change plural (cs is better for that)": {
-    "translation": "",
-    "origin": [
-      [
-        "App.js",
         84
       ]
-    ],
-    "obsolete": true
-  },
-  "toggle language": {
-    "translation": "",
-    "origin": [
-      [
-        "App.js",
-        39
-      ]
-    ],
-    "obsolete": true
-  },
-  "add message": {
-    "translation": "",
-    "origin": [
-      [
-        "App.js",
-        81
-      ]
-    ],
-    "obsolete": true
-  },
-  "{messagesCount, plural, =0 {You have no unread messages} one {There's # message in your inbox} many {There're # messages in your inbox} other {There're # messages in your inbox}}": {
-    "translation": "",
-    "origin": [
-      [
-        "App.js",
-        84
-      ]
-    ],
-    "obsolete": true
-  },
-  "{messagesCount, plural, =0 {You have no unread messages} one {There's # message in your inbox} other {There're # messages in your inbox}}": {
-    "translation": "",
-    "origin": [
-      [
-        "App.js",
-        75
-      ]
-    ],
-    "obsolete": true
-  },
-  "{messagesCount, plural, one {There's # message in your inbox} other {There're # messages in your inbox}}": {
-    "translation": "",
-    "origin": [
-      [
-        "App.js",
-        75
-      ]
-    ],
-    "obsolete": true
+    ]
   }
 }
