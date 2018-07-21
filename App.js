@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Alert, SafeAreaView, Button } from 'react-native';
+import { StyleSheet, Text, View, Alert, SafeAreaView } from 'react-native';
 import { I18nProvider, Trans, Plural, withI18n } from '@lingui/react';
 import { i18n, changeActiveLanguage } from './i18nInstanceHolder';
+import { Button } from './PaddedButton';
 
 export default class App extends React.Component {
   state = {
@@ -45,7 +46,16 @@ export default class App extends React.Component {
   showAlert = () => {
     // NOTE - here we're using the i18n instance that does NOT come from the react context, but from the i18nInstanceHolder module
     // this is because there is nothing that would need to re-render: we're just calling a function and displaying its result in an alert
-    Alert.alert('', i18n.t`Do you want to set all your messages as read?`);
+    Alert.alert('', i18n.t`Do you want to set all your messages as read?`, [
+      {
+        text: 'OK',
+        onPress: () => {
+          this.setState({
+            messages: [],
+          });
+        },
+      },
+    ]);
   };
 
   addMessage = () => {
