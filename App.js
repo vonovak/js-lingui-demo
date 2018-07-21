@@ -1,26 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, Alert, SafeAreaView, Button } from 'react-native';
 import { I18nProvider, Trans, Plural, withI18n } from '@lingui/react';
-import { setupI18n } from '@lingui/core';
-import enMessages from './locale/en/messages.js';
-import csMessages from './locale/cs/messages.js';
-
-const createI18 = language => {
-  return setupI18n({
-    language,
-    catalogs: {
-      en: enMessages,
-      cs: csMessages,
-    },
-  });
-};
-
-// you can keep this in a separate module and expose as a singleton
-let initialI18n = createI18('en');
+import { i18n, changeActiveLanguage } from './i18nInstanceHolder';
 
 export default class App extends React.Component {
   state = {
-    i18n: initialI18n,
+    i18n: i18n,
     activeLanguage: 'en',
     messages: [],
   };
@@ -50,15 +35,16 @@ export default class App extends React.Component {
 
   toggleLanguage = () => {
     const newLanguage = this.state.activeLanguage === 'en' ? 'cs' : 'en';
-    const newI18n = createI18(newLanguage);
+    const updatedI18nInstance = changeActiveLanguage(newLanguage);
     this.setState({
       activeLanguage: newLanguage,
-      i18n: newI18n,
+      i18n: updatedI18nInstance,
     });
-    i18n = newI18n;
   };
 
   showAlert = () => {
+    // NOTE - here we're using the i18n instance that does NOT come from the react context, but from the i18nInstanceHolder module
+    // this is because there is nothing that would need to re-render: we're just calling a function and displaying its result in an alert
     Alert.alert('', i18n.t`Do you want to set all your messages as read?`);
   };
 
@@ -71,6 +57,8 @@ export default class App extends React.Component {
 
 const Inbox = withI18n()(({ messages, markAsRead, username, addMessage, i18n }) => {
   const messagesCount = messages.length;
+  // NOTE - here we're using the i18n instance that comes from the react context.
+  // that makes sure the component always re-renders when active language is changed
 
   return (
     <View style={styles.container}>
