@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "lingui-demo",
-    "slug": "lingui-demo",
-    "version": "1.0.0",
+    "name": "js-lingui-demo",
+    "description": "This a simple demo app for lingui.js",
+    "slug": "js-lingui-demo",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
