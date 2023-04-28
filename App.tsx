@@ -9,10 +9,10 @@ import { Text } from "react-native";
 import { i18n } from "@lingui/core";
 import { I18nProvider, TransRenderProps } from "@lingui/react";
 
-import { messages as enMessages } from "./src/locales/en/messages.js";
+import { messages } from "./src/locales/en/messages.js";
 import { Body } from "./src/MainScreen";
 
-i18n.loadAndActivate({ locale: "en", messages: enMessages.messages });
+i18n.loadAndActivate({ locale: "en", messages });
 
 const DefaultComponent = (props: TransRenderProps) => {
   return <Text>{props.children}</Text>;
